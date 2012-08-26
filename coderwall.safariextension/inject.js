@@ -17,8 +17,12 @@ if((location.protocol + '//' + location.host + location.pathname) === "http://co
     
     var title = document.getElementById("protip_title");
     var body = document.getElementById("protip_body");
-    title.value = $_GET['hacktitle'];
-    body.value = $_GET['hackurl'];
+    if(typeof($_GET['hacktitle']) !== 'undefined') {
+        title.value = $_GET['hacktitle'];
+    }
+    if(typeof($_GET['hackurl']) !== 'undefined') {
+        body.value = $_GET['hackurl'];
+    }
 //    document.getElementById("protip_title").value($_GET['hacktitle']);
 //    document.getElementById("protip_body").value($_GET['hackurl']);
 }
